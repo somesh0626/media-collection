@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Video Collection</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f4f4f9; padding: 20px; }
+    h1 { text-align: center; margin-bottom: 30px; }
+    .section { background: white; padding: 20px; margin-bottom: 25px; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+    .section h2 { margin-bottom: 15px; }
+    .videos { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
+    .video-card { text-align: center; }
+    .video-card img { width: 100%; border-radius: 10px; transition: transform 0.2s; cursor: pointer; }
+    .video-card img:hover { transform: scale(1.05); }
+    .video-title { margin-top: 8px; font-size: 14px; font-weight: bold; }
+    a.back { display: inline-block; margin-top: 20px; text-decoration: none; color: #0077cc; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h1>🎬 Video Collection</h1>
+
+  <!-- Tamil Section (example) -->
+  <div class="section">
+    <h2>Tamil</h2>
+    <div class="videos">
+      <div class="video-card">
+        <a href="https://www.youtube.com/live/UelOkRHx5kc" target="_blank">
+          <img src="https://img.youtube.com/vi/UelOkRHx5kc/0.jpg" alt="Meditation">
+        </a>
+        <div class="video-title">Meditation</div>
+      </div>
+      <!-- repeat video cards for Tamil -->
+    </div>
+  </div>
+
+  <!-- Add English, Hindi, Urdu, Kashmiri sections here -->
+
+  <a class="back" href="index.html">⬅ Back to Home</a>
+</body>
+</html>

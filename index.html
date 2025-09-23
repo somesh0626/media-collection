@@ -1,35 +1,63 @@
-<section class="video-section">
-  <h2>🎬 Hindi</h2>
-  <div class="video-grid">
-    <div class="video-card">
-      <a href="https://youtu.be/fG1oNm2tCro" target="_blank">
-        <img src="https://img.youtube.com/vi/fG1oNm2tCro/0.jpg" alt="Motivation">
-        <p>Motivation</p>
-      </a>
-    </div>
-    <div class="video-card">
-      <a href="https://youtu.be/8ln4XfRi6uw" target="_blank">
-        <img src="https://img.youtube.com/vi/8ln4XfRi6uw/0.jpg" alt="Meditation">
-        <p>Meditation</p>
-      </a>
-    </div>
-    <div class="video-card">
-      <a href="https://youtu.be/Lv1jpqkN4ZY" target="_blank">
-        <img src="https://img.youtube.com/vi/Lv1jpqkN4ZY/0.jpg" alt="Meditation">
-        <p>Meditation</p>
-      </a>
-    </div>
-    <div class="video-card">
-      <a href="https://youtu.be/bE2NUEKq_KE" target="_blank">
-        <img src="https://img.youtube.com/vi/bE2NUEKq_KE/0.jpg" alt="Motivation">
-        <p>Motivation</p>
-      </a>
-    </div>
-    <div class="video-card">
-      <a href="https://youtu.be/KvBQr2IFQ6g" target="_blank">
-        <img src="https://img.youtube.com/vi/KvBQr2IFQ6g/0.jpg" alt="Yoga">
-        <p>Yoga</p>
-      </a>
-    </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Media Collection - Home</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+    h1 {
+      margin-bottom: 20px;
+    }
+    select, button {
+      padding: 10px;
+      font-size: 16px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    button {
+      cursor: pointer;
+      background: #0077cc;
+      color: white;
+      border: none;
+      transition: background 0.2s;
+    }
+    button:hover {
+      background: #005fa3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome 🎬🎵</h1>
+    <p>Select what you want to explore:</p>
+    <select id="mediaSelect">
+      <option value="videos.html">Videos</option>
+      <option value="audios.html">Audios</option>
+    </select>
+    <br>
+    <button onclick="goToPage()">Go</button>
   </div>
-</section>
+
+  <script>
+    function goToPage() {
+      const selectedPage = document.getElementById("mediaSelect").value;
+      window.location.href = selectedPage;
+    }
+  </script>
+</body>
+</html>
