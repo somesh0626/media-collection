@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Suggestions</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 30px;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #ff9966, #ff5e62);
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: white;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+    }
+
+    .tabs {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .tab {
+      padding: 10px 20px;
+      background: white;
+      border-radius: 25px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .tab:hover {
+      background: #0077cc;
+      color: white;
+    }
+
+    .tab.active {
+      background: #0077cc;
+      color: white;
+    }
+
+    .content {
+      background: rgba(255,255,255,0.9);
+      border-radius: 15px;
+      padding: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      animation: fadeIn 0.5s ease;
+    }
+
+    h2 {
+      margin-top: 0;
+      color: #444;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+
+    ul {
+      margin-left: 20px;
+    }
+
+    a.back {
+      display: block;
+      margin-top: 20px;
+      text-align: center;
+      text-decoration: none;
+      font-weight: bold;
+      color: white;
+    }
+
+    a.back:hover {
+      text-decoration: underline;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <h1>💡 Suggestions for Well-being</h1>
+
+  <div class="tabs">
+    <div class="tab active" onclick="showContent('english')">English</div>
+    <div class="tab" onclick="showContent('tamil')">Tamil</div>
+    <div class="tab" onclick="showContent('hindi')">Hindi</div>
+    <div class="tab" onclick="showContent('urdu')">Urdu</div>
+    <div class="tab" onclick="showContent('kashmiri')">Kashmiri</div>
+  </div>
+
+  <!-- English -->
+  <div id="english" class="content">
+    <h2>1. Introduction</h2>
+    <p>Psychoeducational resources are valuable tools that support mental health and emotional well-being. They provide strategies such as guided meditation, mindfulness practices, and music-based interventions.</p>
+
+    <h2>2. Evidence from Meditation and Mindfulness</h2>
+    <p>Meta-analyses show small-to-moderate reductions in stress, anxiety, and depression. These practices encourage observing thoughts without judgment, lowering emotional reactivity.</p>
+
+    <h2>3. Evidence from Music Interventions</h2>
+    <p>Studies confirm music helps relaxation, reduces heart rate, and eases muscle tension. Simple and enjoyable, it is accessible to anyone.</p>
+
+    <h2>4. Culturally Relevant Approaches</h2>
+    <p>Using familiar imagery and sounds increases effectiveness. Local nature references and regional instruments enhance comfort and belonging.</p>
+
+    <h2>5. Benefits and Impact</h2>
+    <ul>
+      <li>Reduced stress, anxiety, and depression</li>
+      <li>Improved mood and calmness</li>
+      <li>Cultural resonance and stronger engagement</li>
+    </ul>
+
+    <h2>6. Conclusion</h2>
+    <p>Meditation, mindfulness, and music interventions improve well-being, while cultural adaptation ensures meaningful impact.</p>
+  </div>
+
+  <!-- Tamil -->
+  <div id="tamil" class="content" style="display:none;">
+    <h2>தமிழ் - பரிந்துரைகள்</h2>
+    <p>(Add Tamil translation of the above content here)</p>
+  </div>
+
+  <!-- Hindi -->
+  <div id="hindi" class="content" style="display:none;">
+    <h2>हिंदी - सुझाव</h2>
+    <p>(Add Hindi translation of the above content here)</p>
+  </div>
+
+  <!-- Urdu -->
+  <div id="urdu" class="content" style="display:none;">
+    <h2>اردو - تجاویز</h2>
+    <p>(Add Urdu translation of the above content here)</p>
+  </div>
+
+  <!-- Kashmiri -->
+  <div id="kashmiri" class="content" style="display:none;">
+    <h2>کٲشُر - مشورے</h2>
+    <p>(Add Kashmiri translation of the above content here)</p>
+  </div>
+
+  <a class="back" href="index.html">⬅ Back to Home</a>
+
+  <script>
+    function showContent(id) {
+      document.querySelectorAll('.content').forEach(div => div.style.display = "none");
+      document.querySelectorAll('.tab').forEach(tab => tab.classList.remove("active"));
+      document.getElementById(id).style.display = "block";
+      event.target.classList.add("active");
+    }
+  </script>
+</body>
+</html>
