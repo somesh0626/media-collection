@@ -2,121 +2,164 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Audio Collection</title>
+  <title>🎵 Audio Collection</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
     body {
-      font-family: Arial, sans-serif;
-      background: #121212;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #121212, #1a1a1a);
       color: #fff;
       padding: 20px;
+      margin: 0;
     }
+
     h1 {
       text-align: center;
       margin-bottom: 30px;
-      font-size: 2em;
+      font-size: 2.4em;
+      font-weight: 600;
+      color: #1db954;
+      text-shadow: 0 0 10px rgba(29, 185, 84, 0.4);
     }
+
     .playlist {
-      max-width: 800px;
+      max-width: 900px;
       margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
     }
+
     .track {
       display: flex;
       align-items: center;
-      justify-content: space-between;
       padding: 12px 16px;
-      border-radius: 8px;
-      margin-bottom: 10px;
+      border-radius: 12px;
       background: rgba(255, 255, 255, 0.05);
-      transition: background 0.2s;
+      transition: transform 0.2s, background 0.3s;
     }
+
     .track:hover {
       background: rgba(255, 255, 255, 0.1);
+      transform: scale(1.02);
     }
+
+    .thumbnail {
+      width: 60px;
+      height: 60px;
+      border-radius: 10px;
+      object-fit: cover;
+      margin-right: 15px;
+    }
+
     .info {
       display: flex;
-      align-items: center;
-      gap: 15px;
+      flex-direction: column;
       flex: 1;
     }
-    .icon {
-      font-size: 24px;
-      color: #1db954;
-    }
-    .details {
-      display: flex;
-      flex-direction: column;
-    }
+
     .title {
-      font-weight: bold;
-      font-size: 1em;
+      font-weight: 600;
+      font-size: 1.1em;
     }
+
     .artist {
       font-size: 0.9em;
       color: #aaa;
     }
+
     .duration {
       font-size: 0.9em;
       color: #bbb;
-      margin-left: 10px;
+      margin-left: 15px;
     }
+
     .play-btn {
-      background: none;
+      background: #1db954;
       border: none;
-      color: #1db954;
-      font-size: 20px;
+      border-radius: 50%;
+      color: #fff;
+      font-size: 16px;
       cursor: pointer;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 15px;
+      transition: background 0.3s, transform 0.2s;
     }
+
     .play-btn:hover {
-      color: #1ed760;
+      background: #1ed760;
+      transform: scale(1.1);
     }
+
+    /* Equalizer animation */
+    .equalizer {
+      display: flex;
+      align-items: flex-end;
+      gap: 3px;
+      margin-left: 15px;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .bar {
+      width: 3px;
+      height: 8px;
+      background: #1db954;
+      animation: bounce 1s infinite;
+    }
+
+    .bar:nth-child(2) { animation-delay: 0.2s; }
+    .bar:nth-child(3) { animation-delay: 0.4s; }
+    .bar:nth-child(4) { animation-delay: 0.6s; }
+
+    @keyframes bounce {
+      0%, 100% { height: 8px; }
+      50% { height: 20px; }
+    }
+
+    .track:hover .equalizer {
+      opacity: 1;
+    }
+
     /* Back button */
     .back-btn {
       display: block;
-      margin: 30px auto 0;
-      padding: 10px 20px;
+      margin: 40px auto 0;
+      padding: 12px 25px;
       text-align: center;
       background: #1db954;
       color: #fff;
       font-weight: bold;
       text-decoration: none;
-      border-radius: 25px;
+      border-radius: 30px;
       width: fit-content;
-      transition: background 0.3s;
+      transition: background 0.3s, transform 0.2s;
     }
+
     .back-btn:hover {
       background: #1ed760;
+      transform: scale(1.05);
     }
   </style>
 </head>
 <body>
-  <h1>🎵 Audio Collection</h1>
+  <h1>🎶 Audio Collection</h1>
   <div class="playlist">
-    
-    <!-- Brighter Dawn -->
-    <div class="track">
-      <div class="info">
-        <span class="icon">🎵</span>
-        <div class="details">
-          <span class="title">Brighter Dawn</span>
-          <span class="artist">Emberlace</span>
-        </div>
-      </div>
-      <span class="duration">2:47</span>
-      <a href="https://open.spotify.com/track/5aBNxo8xRYDT7mEfzkK5AU" target="_blank">
-        <button class="play-btn">▶</button>
-      </a>
-    </div>
 
     <!-- Echoes of the Night -->
     <div class="track">
+      <img src="https://i.scdn.co/image/ab67616d0000b273a06de8d0cd2b77c3eb3aafba" alt="Echoes" class="thumbnail">
       <div class="info">
-        <span class="icon">🎵</span>
-        <div class="details">
-          <span class="title">Echoes of the Night</span>
-          <span class="artist">Oblivionis</span>
-        </div>
+        <span class="title">Echoes of the Night</span>
+        <span class="artist">Oblivionis</span>
       </div>
       <span class="duration">2:23</span>
+      <div class="equalizer"><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div></div>
       <a href="https://open.spotify.com/track/188Jgv7tOdcV9lbZqEzOJA" target="_blank">
         <button class="play-btn">▶</button>
       </a>
@@ -124,44 +167,69 @@
 
     <!-- Floating Away -->
     <div class="track">
+      <img src="https://i.scdn.co/image/ab67616d0000b27308fa5c13e63ed05a796938a0" alt="Floating Away" class="thumbnail">
       <div class="info">
-        <span class="icon">🎵</span>
-        <div class="details">
-          <span class="title">Floating Away</span>
-          <span class="artist">Unknown Artist</span>
-        </div>
+        <span class="title">Floating Away</span>
+        <span class="artist">Nocturna Blooms</span>
       </div>
-      <span class="duration">--:--</span>
+      <span class="duration">2:32</span>
+      <div class="equalizer"><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div></div>
       <a href="https://open.spotify.com/track/4z3Dfe3JlOacY1z8CBSVIu" target="_blank">
         <button class="play-btn">▶</button>
       </a>
     </div>
 
-    <!-- Wishful -->
+    <!-- Cloud -->
     <div class="track">
+      <img src="https://i.scdn.co/image/ab67616d0000b2736f32f9df8db0700129d45f07" alt="Cloud" class="thumbnail">
       <div class="info">
-        <span class="icon">🎵</span>
-        <div class="details">
-          <span class="title">Wishful</span>
-          <span class="artist">Unknown Artist</span>
-        </div>
+        <span class="title">Cloud (Ambient Piano Mix)</span>
+        <span class="artist">Laban</span>
       </div>
-      <span class="duration">--:--</span>
-      <a href="https://open.spotify.com/track/1Uo8DN8pMJ5BaVN0bSdjjW" target="_blank">
+      <span class="duration">2:34</span>
+      <div class="equalizer"><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div></div>
+      <a href="https://open.spotify.com/track/10gBaAldMBTi3B6h8MEFCp" target="_blank">
+        <button class="play-btn">▶</button>
+      </a>
+    </div>
+
+    <!-- Fulfillment -->
+    <div class="track">
+      <img src="https://i.scdn.co/image/ab67616d0000b27310a9387e6f0fdf9d2b6a17d7" alt="Fulfillment" class="thumbnail">
+      <div class="info">
+        <span class="title">Fulfillment</span>
+        <span class="artist">Photoautotroph</span>
+      </div>
+      <span class="duration">2:36</span>
+      <div class="equalizer"><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div></div>
+      <a href="https://open.spotify.com/track/1qniL4F4O4hBtFp5FmK883" target="_blank">
+        <button class="play-btn">▶</button>
+      </a>
+    </div>
+
+    <!-- Brighter Dawn -->
+    <div class="track">
+      <img src="https://i.scdn.co/image/ab67616d0000b2734b6b68c6a4812d0eb4d3f6cb" alt="Brighter Dawn" class="thumbnail">
+      <div class="info">
+        <span class="title">Brighter Dawn</span>
+        <span class="artist">Emberlace</span>
+      </div>
+      <span class="duration">2:47</span>
+      <div class="equalizer"><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div></div>
+      <a href="https://open.spotify.com/track/5aBNxo8xRYDT7mEfzkK5AU" target="_blank">
         <button class="play-btn">▶</button>
       </a>
     </div>
 
     <!-- Full Moon -->
     <div class="track">
+      <img src="https://i.scdn.co/image/ab67616d0000b273d385d0a8a5e2c1c8e08b789e" alt="Full Moon" class="thumbnail">
       <div class="info">
-        <span class="icon">🎵</span>
-        <div class="details">
-          <span class="title">Full Moon</span>
-          <span class="artist">Seori</span>
-        </div>
+        <span class="title">Full Moon</span>
+        <span class="artist">Leo Dey</span>
       </div>
-      <span class="duration">4:03</span>
+      <span class="duration">2:50</span>
+      <div class="equalizer"><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div></div>
       <a href="https://open.spotify.com/track/3kMMrEOI9ld3CBzdO49THG" target="_blank">
         <button class="play-btn">▶</button>
       </a>
@@ -169,59 +237,55 @@
 
     <!-- Minimal -->
     <div class="track">
+      <img src="https://i.scdn.co/image/ab67616d0000b273445e00d12f9e6ea8657f5e10" alt="Minimal" class="thumbnail">
       <div class="info">
-        <span class="icon">🎵</span>
-        <div class="details">
-          <span class="title">Minimal</span>
-          <span class="artist">Unknown Artist</span>
-        </div>
+        <span class="title">Minimal</span>
+        <span class="artist">AstroAether</span>
       </div>
-      <span class="duration">--:--</span>
+      <span class="duration">3:05</span>
+      <div class="equalizer"><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div></div>
       <a href="https://open.spotify.com/track/0oxwvgg3rFvxkZsZdcABNA" target="_blank">
+        <button class="play-btn">▶</button>
+      </a>
+    </div>
+
+    <!-- Wishful -->
+    <div class="track">
+      <img src="https://i.scdn.co/image/ab67616d0000b27396ddf52c16e491061b85d34f" alt="Wishful" class="thumbnail">
+      <div class="info">
+        <span class="title">Wishful</span>
+        <span class="artist">Placidous</span>
+      </div>
+      <span class="duration">3:12</span>
+      <div class="equalizer"><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div></div>
+      <a href="https://open.spotify.com/track/1Uo8DN8pMJ5BaVN0bSdjjW" target="_blank">
         <button class="play-btn">▶</button>
       </a>
     </div>
 
     <!-- The Dreamer -->
     <div class="track">
+      <img src="https://i.scdn.co/image/ab67616d0000b27352d4f03d8f6f92c9c268c4b0" alt="The Dreamer" class="thumbnail">
       <div class="info">
-        <span class="icon">🎵</span>
-        <div class="details">
-          <span class="title">The Dreamer</span>
-          <span class="artist">Unknown Artist</span>
-        </div>
+        <span class="title">The Dreamer</span>
+        <span class="artist">Emma-Lo Larsson</span>
       </div>
-      <span class="duration">--:--</span>
+      <span class="duration">3:16</span>
+      <div class="equalizer"><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div></div>
       <a href="https://open.spotify.com/track/7m1FO52k1xNJDUdiBvItiZ" target="_blank">
-        <button class="play-btn">▶</button>
-      </a>
-    </div>
-
-    <!-- Fulfillment -->
-    <div class="track">
-      <div class="info">
-        <span class="icon">🎵</span>
-        <div class="details">
-          <span class="title">Fulfillment</span>
-          <span class="artist">Unknown Artist</span>
-        </div>
-      </div>
-      <span class="duration">--:--</span>
-      <a href="https://open.spotify.com/track/1qniL4F4O4hBtFp5FmK883" target="_blank">
         <button class="play-btn">▶</button>
       </a>
     </div>
 
     <!-- Oniria -->
     <div class="track">
+      <img src="https://i.scdn.co/image/ab67616d0000b273ffcf8d5b06666a941bb1c99b" alt="Oniria" class="thumbnail">
       <div class="info">
-        <span class="icon">🎵</span>
-        <div class="details">
-          <span class="title">Oniria</span>
-          <span class="artist">Unknown Artist</span>
-        </div>
+        <span class="title">Oniria</span>
+        <span class="artist">Dopamine Clouds</span>
       </div>
-      <span class="duration">--:--</span>
+      <span class="duration">3:17</span>
+      <div class="equalizer"><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div></div>
       <a href="https://open.spotify.com/track/5Cwt22rLEsrCjIXvcZ4Gz2" target="_blank">
         <button class="play-btn">▶</button>
       </a>
@@ -229,30 +293,14 @@
 
     <!-- Do We Wake -->
     <div class="track">
+      <img src="https://i.scdn.co/image/ab67616d0000b2730f48b5a7d2f43b34426e7e8e" alt="Do We Wake" class="thumbnail">
       <div class="info">
-        <span class="icon">🎵</span>
-        <div class="details">
-          <span class="title">Do We Wake</span>
-          <span class="artist">Unknown Artist</span>
-        </div>
+        <span class="title">Do We Wake</span>
+        <span class="artist">Dear Gravity & Simon Wester</span>
       </div>
-      <span class="duration">--:--</span>
+      <span class="duration">3:36</span>
+      <div class="equalizer"><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div></div>
       <a href="https://open.spotify.com/track/5nEvhoKxYs665DDlRyhtrU" target="_blank">
-        <button class="play-btn">▶</button>
-      </a>
-    </div>
-
-    <!-- Cloud -->
-    <div class="track">
-      <div class="info">
-        <span class="icon">🎵</span>
-        <div class="details">
-          <span class="title">Cloud</span>
-          <span class="artist">Unknown Artist</span>
-        </div>
-      </div>
-      <span class="duration">--:--</span>
-      <a href="https://open.spotify.com/track/10gBaAldMBTi3B6h8MEFCp" target="_blank">
         <button class="play-btn">▶</button>
       </a>
     </div>
