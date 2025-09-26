@@ -11,12 +11,14 @@
       color: #333;
     }
 
+    /* Hero Section */
     .hero {
       background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
                   url('https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=1600&q=80') no-repeat center/cover;
       color: white;
       text-align: center;
       padding: 60px 20px;
+      position: relative;
     }
     .hero h1 {
       font-size: 2.5rem;
@@ -29,18 +31,38 @@
       line-height: 1.6;
     }
 
+    /* Back Button */
+    .back-btn {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: #ff9800;
+      color: white;
+      padding: 10px 18px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .back-btn:hover {
+      background: #e68900;
+    }
+
+    /* Container */
     .container {
       padding: 20px;
       max-width: 1200px;
       margin: auto;
     }
 
+    /* Grid */
     .video-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 20px;
     }
 
+    /* Cards */
     .video-card {
       background: white;
       border-radius: 12px;
@@ -55,6 +77,7 @@
       box-shadow: 0 6px 18px rgba(0,0,0,0.15);
     }
 
+    /* Thumbnail */
     .thumbnail {
       position: relative;
     }
@@ -84,6 +107,7 @@
       padding: 6px 10px;
     }
 
+    /* Title and description */
     .video-card h3 {
       font-size: 1rem;
       margin: 10px;
@@ -99,6 +123,7 @@
 
   <!-- Hero Section -->
   <div class="hero">
+    <a href="videos.html" class="back-btn">← Back</a>
     <h1>Tamil Videos</h1>
     <p>நீங்கள் அமைதி, சாந்தி, மற்றும் உந்துதல் பெறுவதற்காக தேர்ந்தெடுக்கப்பட்ட 
        தமிழ் தியானம், யோகா மற்றும் உந்துதல் வீடியோக்களை ஆராயுங்கள்.</p>

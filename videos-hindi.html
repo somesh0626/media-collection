@@ -8,8 +8,35 @@
   <!-- styles & icons -->
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
   <link rel="stylesheet" href="videos.css" />
+
+  <style>
+    /* Back button styling */
+    .back-btn {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      background: #4a90e2;
+      color: white;
+      padding: 10px 18px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: background 0.3s ease, transform 0.2s ease;
+      z-index: 1000;
+    }
+    .back-btn:hover {
+      background: #357abd;
+      transform: translateY(-2px);
+    }
+  </style>
 </head>
 <body>
+  <!-- Back button -->
+  <a href="videos.html" class="back-btn"><i class='bx bx-arrow-back'></i> Back</a>
 
   <!-- HERO -->
   <header class="hero">
@@ -180,7 +207,6 @@
         </div>
         <h3>Yoga for Stress — Kashmiri</h3>
       </a>
-
     </section>
   </main>
 

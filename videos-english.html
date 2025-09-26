@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>English Videos | Stress Relief & Motivation</title>
+  <title>English Videos | Meditation, Yoga & Motivation</title>
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -10,13 +10,13 @@
       background: #f9f9f9;
       color: #333;
     }
-
     .hero {
       background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
                   url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80') no-repeat center/cover;
       color: white;
       text-align: center;
       padding: 60px 20px;
+      position: relative;
     }
     .hero h1 {
       font-size: 2.5rem;
@@ -28,19 +28,31 @@
       margin: auto;
       line-height: 1.6;
     }
-
+    .back-btn {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: #2196f3;
+      color: white;
+      padding: 10px 18px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .back-btn:hover {
+      background: #0b79d0;
+    }
     .container {
       padding: 20px;
       max-width: 1200px;
       margin: auto;
     }
-
     .video-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 20px;
     }
-
     .video-card {
       background: white;
       border-radius: 12px;
@@ -48,13 +60,12 @@
       text-decoration: none;
       color: inherit;
       box-shadow: 0 3px 12px rgba(0,0,0,0.1);
-      transition: transform 0.3s, box-shadow 0.3s;
+      transition: 0.3s;
     }
     .video-card:hover {
       transform: translateY(-5px);
       box-shadow: 0 6px 18px rgba(0,0,0,0.15);
     }
-
     .thumbnail {
       position: relative;
     }
@@ -83,7 +94,6 @@
       font-size: 1.5rem;
       padding: 6px 10px;
     }
-
     .video-card h3 {
       font-size: 1rem;
       margin: 10px;
@@ -96,137 +106,135 @@
   </style>
 </head>
 <body>
-
-  <!-- Hero Section -->
   <div class="hero">
+    <a href="videos.html" class="back-btn">← Back</a>
     <h1>English Videos</h1>
-    <p>Explore hand-picked English videos on <strong>Motivation, Meditation, and Yoga</strong> 
-       designed to help you relieve stress, overcome anxiety, and stay motivated.</p>
+    <p>Explore curated English meditation, yoga, and motivational videos to find calm, focus, and inspiration.</p>
   </div>
 
-  <!-- Video Grid -->
   <div class="container">
     <div class="video-grid">
 
-      <!-- 1 -->
-      <a href="https://www.youtube.com/watch?v=lDEkOzvysm0" target="_blank" class="video-card">
+      <!-- Meditation & Yoga (6) -->
+      <a href="https://youtu.be/inpok4MKVLM" target="_blank" class="video-card">
         <div class="thumbnail">
-          <img src="https://img.youtube.com/vi/lDEkOzvysm0/hqdefault.jpg" alt="Motivation English">
-          <span class="duration">12:00</span>
+          <img src="https://img.youtube.com/vi/inpok4MKVLM/hqdefault.jpg">
+          <span class="duration">10:00</span>
           <div class="play-btn">▶</div>
         </div>
-        <h3>Motivational Talk: Stress Management</h3>
-        <p>Theme: Motivation</p>
+        <h3>5-Minute Meditation</h3>
+        <p>Theme: Meditation</p>
       </a>
 
-      <!-- 2 -->
-      <a href="https://www.youtube.com/watch?v=0cwtNOq_k4w" target="_blank" class="video-card">
+      <a href="https://youtu.be/O-6f5wQXSu8" target="_blank" class="video-card">
         <div class="thumbnail">
-          <img src="https://img.youtube.com/vi/0cwtNOq_k4w/hqdefault.jpg" alt="Motivation English">
+          <img src="https://img.youtube.com/vi/O-6f5wQXSu8/hqdefault.jpg">
           <span class="duration">15:00</span>
           <div class="play-btn">▶</div>
         </div>
-        <h3>Overcoming Challenges with Motivation</h3>
-        <p>Theme: Motivation</p>
-      </a>
-
-      <!-- 3 -->
-      <a href="https://www.youtube.com/watch?v=Tuw8hxrFBH8" target="_blank" class="video-card">
-        <div class="thumbnail">
-          <img src="https://img.youtube.com/vi/Tuw8hxrFBH8/hqdefault.jpg" alt="Motivation English">
-          <span class="duration">10:00</span>
-          <div class="play-btn">▶</div>
-        </div>
-        <h3>Motivational Speech for Success</h3>
-        <p>Theme: Motivation</p>
-      </a>
-
-      <!-- 4 -->
-      <a href="https://www.youtube.com/watch?v=MIr3RsUWrdo" target="_blank" class="video-card">
-        <div class="thumbnail">
-          <img src="https://img.youtube.com/vi/MIr3RsUWrdo/hqdefault.jpg" alt="Meditation English">
-          <span class="duration">18:00</span>
-          <div class="play-btn">▶</div>
-        </div>
-        <h3>Deep Relaxation Meditation</h3>
+        <h3>Mindfulness Meditation</h3>
         <p>Theme: Meditation</p>
       </a>
 
-      <!-- 5 -->
-      <a href="https://www.youtube.com/watch?v=yqeirBfn2j4" target="_blank" class="video-card">
+      <a href="https://youtu.be/sTANio_2E0Q" target="_blank" class="video-card">
         <div class="thumbnail">
-          <img src="https://img.youtube.com/vi/yqeirBfn2j4/hqdefault.jpg" alt="Yoga English">
-          <span class="duration">22:00</span>
-          <div class="play-btn">▶</div>
-        </div>
-        <h3>Yoga for Beginners – Stress Relief</h3>
-        <p>Theme: Yoga</p>
-      </a>
-
-      <!-- 6 -->
-      <a href="https://www.youtube.com/watch?v=ZToicYcHIOU" target="_blank" class="video-card">
-        <div class="thumbnail">
-          <img src="https://img.youtube.com/vi/ZToicYcHIOU/hqdefault.jpg" alt="Meditation English">
-          <span class="duration">10:00</span>
-          <div class="play-btn">▶</div>
-        </div>
-        <h3>10 Minute Guided Meditation</h3>
-        <p>Theme: Meditation</p>
-      </a>
-
-      <!-- 7 -->
-      <a href="https://www.youtube.com/watch?v=sTANio_2E0Q" target="_blank" class="video-card">
-        <div class="thumbnail">
-          <img src="https://img.youtube.com/vi/sTANio_2E0Q/hqdefault.jpg" alt="Yoga English">
+          <img src="https://img.youtube.com/vi/sTANio_2E0Q/hqdefault.jpg">
           <span class="duration">20:00</span>
           <div class="play-btn">▶</div>
         </div>
-        <h3>Yoga for Stress Relief</h3>
+        <h3>Yoga for Relaxation</h3>
         <p>Theme: Yoga</p>
       </a>
 
-      <!-- 8 -->
-      <a href="https://www.youtube.com/watch?v=WWloIAQpMcQ" target="_blank" class="video-card">
+      <a href="https://youtu.be/Eml2xnoLpYE" target="_blank" class="video-card">
         <div class="thumbnail">
-          <img src="https://img.youtube.com/vi/WWloIAQpMcQ/hqdefault.jpg" alt="Motivation English">
+          <img src="https://img.youtube.com/vi/Eml2xnoLpYE/hqdefault.jpg">
+          <span class="duration">12:00</span>
+          <div class="play-btn">▶</div>
+        </div>
+        <h3>Guided Meditation for Sleep</h3>
+        <p>Theme: Meditation</p>
+      </a>
+
+      <a href="https://youtu.be/v7AYKMP6rOE" target="_blank" class="video-card">
+        <div class="thumbnail">
+          <img src="https://img.youtube.com/vi/v7AYKMP6rOE/hqdefault.jpg">
+          <span class="duration">15:00</span>
+          <div class="play-btn">▶</div>
+        </div>
+        <h3>Beginner Yoga Flow</h3>
+        <p>Theme: Yoga</p>
+      </a>
+
+      <a href="https://youtu.be/ZToicYcHIOU" target="_blank" class="video-card">
+        <div class="thumbnail">
+          <img src="https://img.youtube.com/vi/ZToicYcHIOU/hqdefault.jpg">
+          <span class="duration">11:00</span>
+          <div class="play-btn">▶</div>
+        </div>
+        <h3>Breathing Meditation</h3>
+        <p>Theme: Meditation</p>
+      </a>
+
+      <!-- Motivation (6) -->
+      <a href="https://youtu.be/ZXsQAXx_ao0" target="_blank" class="video-card">
+        <div class="thumbnail">
+          <img src="https://img.youtube.com/vi/ZXsQAXx_ao0/hqdefault.jpg">
           <span class="duration">8:00</span>
           <div class="play-btn">▶</div>
         </div>
-        <h3>Speech: Overcoming Stress & Anxiety</h3>
+        <h3>Just Do It Speech</h3>
         <p>Theme: Motivation</p>
       </a>
 
-      <!-- 9 -->
-      <a href="https://www.youtube.com/watch?v=R_yFAMtfv9c" target="_blank" class="video-card">
+      <a href="https://youtu.be/wnHW6o8WMas" target="_blank" class="video-card">
         <div class="thumbnail">
-          <img src="https://img.youtube.com/vi/R_yFAMtfv9c/hqdefault.jpg" alt="Meditation English">
-          <span class="duration">20:00</span>
+          <img src="https://img.youtube.com/vi/wnHW6o8WMas/hqdefault.jpg">
+          <span class="duration">14:00</span>
           <div class="play-btn">▶</div>
         </div>
-        <h3>Stress Reduction Break – Guided Meditation</h3>
-        <p>Theme: Meditation</p>
+        <h3>Believe in Yourself</h3>
+        <p>Theme: Motivation</p>
       </a>
 
-      <!-- 10 -->
-      <a href="https://www.youtube.com/watch?v=nusf3ISodRE" target="_blank" class="video-card">
+      <a href="https://youtu.be/26U_seo0a1g" target="_blank" class="video-card">
         <div class="thumbnail">
-          <img src="https://img.youtube.com/vi/nusf3ISodRE/hqdefault.jpg" alt="Yoga English">
+          <img src="https://img.youtube.com/vi/26U_seo0a1g/hqdefault.jpg">
           <span class="duration">10:00</span>
           <div class="play-btn">▶</div>
         </div>
-        <h3>Morning Yoga for Anxiety</h3>
-        <p>Theme: Yoga</p>
+        <h3>Push Yourself Everyday</h3>
+        <p>Theme: Motivation</p>
       </a>
 
-      <!-- 11 -->
-      <a href="https://www.youtube.com/watch?v=Wfl5tN7decg" target="_blank" class="video-card">
+      <a href="https://youtu.be/7XFLTDQ4JMk" target="_blank" class="video-card">
         <div class="thumbnail">
-          <img src="https://img.youtube.com/vi/Wfl5tN7decg/hqdefault.jpg" alt="Yoga English">
-          <span class="duration">25:00</span>
+          <img src="https://img.youtube.com/vi/7XFLTDQ4JMk/hqdefault.jpg">
+          <span class="duration">9:00</span>
           <div class="play-btn">▶</div>
         </div>
-        <h3>Yoga for Stress, Depression & Anxiety</h3>
-        <p>Theme: Yoga</p>
+        <h3>Stay Strong Motivation</h3>
+        <p>Theme: Motivation</p>
+      </a>
+
+      <a href="https://youtu.be/GgMEk1zFMoU" target="_blank" class="video-card">
+        <div class="thumbnail">
+          <img src="https://img.youtube.com/vi/GgMEk1zFMoU/hqdefault.jpg">
+          <span class="duration">16:00</span>
+          <div class="play-btn">▶</div>
+        </div>
+        <h3>Overcoming Fear</h3>
+        <p>Theme: Motivation</p>
+      </a>
+
+      <a href="https://youtu.be/hbkZrOU1Zag" target="_blank" class="video-card">
+        <div class="thumbnail">
+          <img src="https://img.youtube.com/vi/hbkZrOU1Zag/hqdefault.jpg">
+          <span class="duration">12:00</span>
+          <div class="play-btn">▶</div>
+        </div>
+        <h3>Discipline is Key</h3>
+        <p>Theme: Motivation</p>
       </a>
 
     </div>
