@@ -1,0 +1,161 @@
+/* videos.css - styles for the Hindi/Urdu/Kashmiri page */
+
+/* Base */
+:root{
+  --accent: #1e3a8a;
+  --muted: #6b7280;
+  --bg: #f9fbfe;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: 'Poppins', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: var(--bg);
+  color: #111827;
+}
+
+/* HERO */
+.hero{
+  height: 300px;
+  background-image: url('https://images.unsplash.com/photo-1523978591478-c753949ff840?auto=format&fit=crop&w=1600&q=80');
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-overlay{
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(6, 34, 82, 0.55), rgba(6, 34, 82, 0.25));
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 18px;
+  color: #fff;
+}
+.hero-overlay h1 {
+  margin: 0;
+  font-size: 2.4rem;
+  letter-spacing: 0.2px;
+}
+.hero-overlay p {
+  margin: 0;
+  font-size: 1.05rem;
+  max-width: 900px;
+  opacity: 0.95;
+}
+
+/* Container & filter */
+.container{
+  max-width: 1200px;
+  margin: 28px auto;
+  padding: 0 18px 60px;
+}
+.filter-box{
+  display:flex;
+  justify-content:flex-end;
+  align-items:center;
+  gap:8px;
+  margin: 18px 0;
+}
+.filter-box label{ color:var(--muted); display:flex; gap:8px; align-items:center; font-size:0.95rem; }
+.filter-box select{
+  padding:8px 12px;
+  border-radius:8px;
+  border:1px solid #d1d5db;
+  background:#fff;
+  font-size: 0.95rem;
+  box-shadow: 0 1px 3px rgba(15,23,42,0.03);
+}
+
+/* Grid */
+.video-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap:18px;
+}
+
+/* Card */
+.video-card{
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(2,6,23,0.06);
+  transition: transform .22s ease, box-shadow .22s ease;
+  border: 1px solid rgba(15,23,42,0.03);
+}
+.video-card:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(2,6,23,0.10);
+}
+
+/* Thumbnail area */
+.thumbnail{
+  position: relative;
+  width:100%;
+  height:140px;
+  overflow:hidden;
+  background:#000;
+}
+.thumbnail img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  transition: transform .4s ease;
+}
+.video-card:hover .thumbnail img{ transform: scale(1.06); }
+
+/* overlay play icon */
+.overlay{
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background: rgba(0,0,0,0.22);
+  opacity:0;
+  transition: opacity .22s ease;
+}
+.video-card:hover .overlay{ opacity:1; }
+.overlay i{ color:#fff; font-size:2.6rem; }
+
+/* duration badge */
+.duration{
+  position:absolute;
+  right:8px;
+  bottom:8px;
+  background: rgba(0,0,0,0.72);
+  color: #fff;
+  font-size:0.78rem;
+  padding:4px 7px;
+  border-radius:6px;
+  backdrop-filter: blur(2px);
+}
+
+/* Title */
+.video-card h3{
+  margin:0;
+  padding:12px;
+  font-size:1rem;
+  font-weight:600;
+  background:#fbfdff;
+  border-top:1px solid #f1f5f9;
+  text-align:center;
+}
+
+/* Responsive tweaks */
+@media (max-width:640px){
+  .hero { height:220px; }
+  .hero-overlay h1 { font-size:1.6rem; }
+  .thumbnail{ height:120px; }
+  .video-card h3{ font-size:0.95rem; padding:10px; }
+}

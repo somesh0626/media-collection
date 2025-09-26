@@ -1,0 +1,123 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f4f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  background: #a8dadc;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.navbar h1 {
+  font-size: 1.5rem;
+  color: #1d3557;
+}
+
+.navbar nav a {
+  margin-left: 1rem;
+  text-decoration: none;
+  color: #1d3557;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar nav a:hover,
+.navbar nav a.active {
+  color: #e63946;
+}
+
+/* Page Title */
+.page-title {
+  text-align: center;
+  margin: 2rem 1rem;
+}
+
+.page-title h2 {
+  font-size: 2rem;
+  color: #1d3557;
+  margin-bottom: 0.5rem;
+}
+
+.page-title p {
+  color: #457b9d;
+  font-size: 1.1rem;
+}
+
+/* Suggestions Grid */
+.suggestions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.suggestion-card {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 15px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1d3557;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.suggestion-card:hover {
+  transform: translateY(-5px);
+  background: #eaf4f4;
+}
+
+/* Detail Pages */
+.detail-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.detail-container h2 {
+  color: #1d3557;
+  margin-bottom: 1rem;
+}
+
+.detail-container p {
+  margin-bottom: 1rem;
+  color: #444;
+  font-size: 1.05rem;
+}
+
+/* Back Button */
+.back-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.7rem 1.2rem;
+  background: #a8dadc;
+  color: #1d3557;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.back-btn:hover {
+  background: #457b9d;
+  color: #fff;
+}
